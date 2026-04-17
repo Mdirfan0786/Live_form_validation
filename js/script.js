@@ -105,19 +105,19 @@ function checkFormValidity() {
 function showSummary() {
   let errors = [];
 
-  if (!validateName()) {
+  if (nameInput.value.trim().length < 3) {
     errors.push("Name must be at least 3 characters");
   }
 
-  if (!validateEmail()) {
+  if (!/^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(emailInput.value.trim())) {
     errors.push("Enter a valid email");
   }
 
-  if (!validatePassword()) {
+  if (passInput.value.length < 6) {
     errors.push("Password must be at least 6 characters");
   }
 
-  if (!validateConfirmPassword()) {
+  if (confirmPassInput.value !== passInput.value) {
     errors.push("Passwords do not match");
   }
 
