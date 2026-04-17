@@ -1,0 +1,52 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Live form validation app with real-time feedback, password strength meter, error summary, and localStorage using HTML, CSS, and JavaScript."
+    />
+    <title>Live Form Validation</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="form-container">
+      <h2>Register</h2>
+      <div id="summary-box"></div>
+
+      <form id="signup-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter Your name" required />
+        <small class="error-msg" id="name-error"></small>
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter Your email"
+          required
+        />
+        <small class="error-msg" id="email-error"></small>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Password" required />
+        <small id="password-strength"></small>
+        <small class="error-msg" id="password-error"></small>
+
+        <label for="confirm-password">Confirm Password</label>
+        <input
+          type="password"
+          id="confirm-password"
+          placeholder="Confirm Password"
+          required
+        />
+        <small class="error-msg" id="confirm-password-error"></small>
+
+        <button type="submit" id="submit-btn" disabled>Register</button>
+      </form>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
